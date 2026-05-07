@@ -8,6 +8,16 @@ import "game-db/game"
 // Für diese Spiele werden Spiele mit gleichem Genre oder gemeinsamen Tags gesucht,
 // die von anderen Spielern häufig gespielt wurden.
 func (db *GameDb) RecommendGames(playerName string) []*game.Game {
+	// Hinweis: Implementieren Sie die Empfehlungslogik in mehreren Schritten:
+	// 1. Finde den Spieler in der Datenbank.
+	// 2. Sammle alle Spiele, die der Spieler oft gespielt hat (mindestens `MinHoursForRecommendation` Stunden).
+	// 3. Bestimme die Genres der gespielten Spiele.
+	// 4. Suche nach Spielen mit gleichem Genre in der Spiele-Datenbank.
+	// 5. Baue das Ergebnis auf:
+	//    - Zähle, wie oft diese Spiele von anderen Spielern gespielt wurden.
+	//    - Füge Spiele hinzu, die von mindestens `MinPlayersForRecommendation`
+	//      anderen Spielern für jeweils mindestens `MinHoursForRecommendation`
+	//      gespielt wurden.
 	recommendedGames := []*game.Game{}
 
 	// Schritt 1: Finde den Spieler in der Datenbank

@@ -13,22 +13,23 @@ func New(name string) *Player {
 	// Hinweis: Erstellen Sie ein neues Player-Objekt mit dem übergebenen Namen und einem leeren Map für gespielte Spiele.
 	//          Liefern Sie einen Pointer auf das neue Player-Objekt zurück.
 
-	return &Player{Name: name, playedGames: map[string]int{}}
+	// TODO
+	return nil
 }
 
 // PlayGame fügt ein Spiel zu den gespielten Spielen des Spielers hinzu und erhöht die Anzahl der gespielten Stunden.
 func (p *Player) PlayGame(g *game.Game, hours int) {
 	// Hinweis: Fügen Sie das Spiel mit der Anzahl der gespielten Stunden zur Map `playedGames` des Spielers hinzu.
 
-	p.playedGames[g.Title] = hours
+	// TODO
 }
 
 // HasPlayed prüft, ob der Spieler ein bestimmtes Spiel gespielt hat.
 func (p *Player) HasPlayed(g *game.Game) bool {
 	// Hinweis: Überprüfen Sie, ob das Spiel in der Map `playedGames` des Spielers vorhanden ist.
 
-	_, played := p.playedGames[g.Title]
-	return played
+	// TODO
+	return false
 }
 
 // HasPlayedMore prüft, ob der Spieler ein bestimmtes Spiel mindestens `hours` Stunden gespielt hat.
@@ -36,8 +37,8 @@ func (p *Player) HasPlayedMore(g *game.Game, hours int) bool {
 	// Hinweis: Überprüfen Sie, ob die gespielten Stunden für das Spiel in der Map `playedGames`
 	// des Spielers größer oder gleich `hours` sind.
 
-	playedHours := p.playedGames[g.Title]
-	return playedHours >= hours
+	// TODO
+	return false
 }
 
 // PlayedGames liefert eine Liste mit den Spielen, die der
@@ -47,10 +48,6 @@ func (p *Player) PlayedGames(hours int) []string {
 	// die der Spieler mindestens `hours` Stunden gespielt hat, in einer Liste.
 
 	games := []string{}
-	for title, playedHours := range p.playedGames {
-		if playedHours >= hours {
-			games = append(games, title)
-		}
-	}
+	// TODO
 	return games
 }

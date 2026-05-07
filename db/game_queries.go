@@ -11,19 +11,7 @@ func (db *GameDb) GetPlayedGames(name string, min_played int) []*game.Game {
 	//          und sammeln Sie die passenden Spiele in einer Liste, die Sie zurückgeben.
 
 	games := []*game.Game{}
-	player := db.GetPlayer(name)
-	if player == nil {
-		return games
-	}
-
-	for _, title := range player.PlayedGames(min_played) {
-		for _, g := range db.Games {
-			if g.Title == title {
-				games = append(games, g)
-				break
-			}
-		}
-	}
+	// TODO
 	return games
 }
 
@@ -33,10 +21,6 @@ func (db *GameDb) GetGamesByGenre(genre string) []*game.Game {
 	// die das gesuchte Genre haben, in einer Liste, die Sie zurückgeben.
 
 	games := []*game.Game{}
-	for _, g := range db.Games {
-		if g.Genre == genre {
-			games = append(games, g)
-		}
-	}
+	// TODO
 	return games
 }

@@ -1,7 +1,6 @@
 package db
 
 import (
-	"game-db/game"
 	"game-db/player"
 )
 
@@ -13,11 +12,7 @@ func (db *GameDb) GetPlayer(name string) *player.Player {
 	// vergleichen Sie die Namen der Spieler mit dem gesuchten Namen.
 	// Wenn ein Spieler gefunden wird, liefern Sie einen Zeiger auf diesen Spieler zurück.
 
-	for _, p := range db.Players {
-		if p.Name == name {
-			return p
-		}
-	}
+	// TODO
 	return nil
 }
 
@@ -29,11 +24,6 @@ func (db *GameDb) GetPlayersByGame(title string, min_played int) []*player.Playe
 	// Sammeln Sie die passenden Spieler in einer Liste, die Sie zurückgeben.
 
 	players := []*player.Player{}
-
-	for _, p := range db.Players {
-		if p.HasPlayedMore(&game.Game{Title: title}, min_played) {
-			players = append(players, p)
-		}
-	}
+	// TODO
 	return players
 }

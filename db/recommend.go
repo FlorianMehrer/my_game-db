@@ -5,7 +5,7 @@ import "game-db/game"
 // RecommendGames erwartet einen Spielernamen und generiert Spiele-Empfehlungen.
 //
 // Die Funktion sucht nach Spielen, die der Spieler oft gespielt hat.
-// Für diese Spiele werden Spiele mit gleichem Genre oder gemeinsamen Tags gesucht,
+// Für diese Spiele werden Spiele mit gleichem Genre gesucht,
 // die von anderen Spielern häufig gespielt wurden.
 func (db *GameDb) RecommendGames(playerName string) []*game.Game {
 	// Hinweis: Implementieren Sie die Empfehlungslogik in mehreren Schritten:

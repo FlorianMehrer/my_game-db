@@ -10,7 +10,6 @@ func (db *GameDb) GetPlayedGames(name string, min_played int) []*game.Game {
 	//          um die Titel der gespielten Spiele zu erhalten. Vergleichen Sie diese Titel mit den Spielen in der Datenbank
 	//          und sammeln Sie die passenden Spiele in einer Liste, die Sie zurückgeben.
 
-	// begin:solution
 	games := []*game.Game{}
 	player := db.GetPlayer(name)
 	if player == nil {
@@ -26,7 +25,6 @@ func (db *GameDb) GetPlayedGames(name string, min_played int) []*game.Game {
 		}
 	}
 	return games
-	// end:solution
 }
 
 // GetGamesByGenre sucht Spiele in der Datenbank anhand ihres Genres.
@@ -34,7 +32,6 @@ func (db *GameDb) GetGamesByGenre(genre string) []*game.Game {
 	// Hinweis: Durchsuchen Sie die Liste der Spiele in der Datenbank und sammeln Sie die Spiele,
 	// die das gesuchte Genre haben, in einer Liste, die Sie zurückgeben.
 
-	// begin:solution
 	games := []*game.Game{}
 	for _, g := range db.Games {
 		if g.Genre == genre {
@@ -42,5 +39,4 @@ func (db *GameDb) GetGamesByGenre(genre string) []*game.Game {
 		}
 	}
 	return games
-	// end:solution
 }

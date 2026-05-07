@@ -13,14 +13,12 @@ func (db *GameDb) GetPlayer(name string) *player.Player {
 	// vergleichen Sie die Namen der Spieler mit dem gesuchten Namen.
 	// Wenn ein Spieler gefunden wird, liefern Sie einen Zeiger auf diesen Spieler zurück.
 
-	// begin:solution
 	for _, p := range db.Players {
 		if p.Name == name {
 			return p
 		}
 	}
 	return nil
-	// end:solution
 }
 
 // GetPlayersByGame sucht Spieler in der Datenbank, die ein bestimmtes Spiel gespielt haben.
@@ -30,7 +28,6 @@ func (db *GameDb) GetPlayersByGame(title string, min_played int) []*player.Playe
 	// ob er das gesuchte Spiel mit mindestens der angegebenen Anzahl gespielter Stunden gespielt hat.
 	// Sammeln Sie die passenden Spieler in einer Liste, die Sie zurückgeben.
 
-	// begin:solution
 	players := []*player.Player{}
 
 	for _, p := range db.Players {
@@ -39,5 +36,4 @@ func (db *GameDb) GetPlayersByGame(title string, min_played int) []*player.Playe
 		}
 	}
 	return players
-	// end:solution
 }
